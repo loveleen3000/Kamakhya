@@ -1,0 +1,4 @@
+kamakhya/.env
+kamakhya/.env.local
+kamakhya/node_modules/
+kamakhya/dist/

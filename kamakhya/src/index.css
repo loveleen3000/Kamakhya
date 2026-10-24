@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 6 100% 98%;
+    --foreground: 345 51% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 345 51% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 345 51% 16%;
+    --primary: 345 51% 16%;
+    --primary-foreground: 6 100% 98%;
+    --secondary: 34 100% 92%;
+    --secondary-foreground: 345 51% 16%;
+    --muted: 6 60% 96%;
+    --muted-foreground: 345 12% 42%;
+    --accent: 269 100% 92%;
+    --accent-foreground: 345 51% 16%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 348 30% 91%;
+    --input: 348 30% 91%;
+    --ring: 350 75% 64%;
+    --chart-1: 350 75% 64%;
+    --chart-2: 345 51% 16%;
+    --chart-3: 269 60% 82%;
+    --chart-4: 34 100% 78%;
+    --chart-5: 337 62% 34%;
+    --radius: 1.15rem;
+    --font-heading: "Playfair Display", "DM Serif Display", Georgia, serif;
+    --font-body: "Plus Jakarta Sans", "DM Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "DM Serif Display", "Playfair Display", Georgia, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  ::selection {
+    background: rgba(232, 93, 117, 0.24);
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+  }
+
+  .glass-soft {
+    background: rgba(255, 255, 255, 0.62);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .glass-dark {
+    background: rgba(61, 20, 30, 0.72);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 14px 34px -18px rgba(61, 20, 30, 0.28), 0 2px 10px -6px rgba(61, 20, 30, 0.12);
+  }
+
+  .shadow-lift {
+    box-shadow: 0 30px 70px -30px rgba(61, 20, 30, 0.42), 0 8px 22px -14px rgba(61, 20, 30, 0.2);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 20px 48px -20px rgba(232, 93, 117, 0.7), 0 6px 16px -10px rgba(142, 31, 69, 0.35);
+  }
+
+  .shadow-glow-soft {
+    box-shadow: 0 18px 40px -24px rgba(232, 93, 117, 0.55);
+  }
+
+  .brand-gradient {
+    background-image: linear-gradient(120deg, #5C1D2E 0%, #8E1F45 48%, #E85D75 100%);
+  }
+
+  .gradient-text {
+    background-image: linear-gradient(100deg, #5C1D2E 0%, #8E1F45 40%, #E85D75 75%, #F7B267 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .ring-lotus-soft {
+    box-shadow: 0 0 0 1px rgba(232, 93, 117, 0.35), 0 0 0 6px rgba(232, 93, 117, 0.12);
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .press {
+    transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .press:active {
+    transform: scale(0.96);
+  }
+
+  .flip-card {
+    perspective: 1400px;
+  }
+
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .flip-inner.is-flipped {
+    transform: rotateY(180deg);
+  }
+
+  .flip-face {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .flip-back {
+    transform: rotateY(180deg);
+  }
+
+  .kam-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 14px;
+    border-radius: 999px;
+    outline: none;
+    background-image: linear-gradient(90deg, #FFD9A0 0%, #F7A5B4 42%, #E85D75 70%, #8E1F45 100%);
+    box-shadow: inset 0 1px 3px rgba(61, 20, 30, 0.25);
+  }
+
+  .kam-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    background: #FFFFFF;
+    border: 3px solid #E85D75;
+    box-shadow: 0 8px 20px -6px rgba(232, 93, 117, 0.8);
+    cursor: pointer;
+    transition: transform 0.18s ease;
+  }
+
+  .kam-range::-webkit-slider-thumb:active {
+    transform: scale(1.12);
+  }
+
+  .kam-range::-moz-range-thumb {
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    background: #FFFFFF;
+    border: 3px solid #E85D75;
+    box-shadow: 0 8px 20px -6px rgba(232, 93, 117, 0.8);
+    cursor: pointer;
+  }
+}
+/* Discreet Mode: Cycle dates aur status ko auto-blur karna */
+html.discreet-on [data-discreet],
+html.discreet-on .font-display,
+html.discreet-on .font-heading {
+  filter: blur(6px) !important;
+  user-select: none !important;
+  transition: filter 0.25s ease;
+}

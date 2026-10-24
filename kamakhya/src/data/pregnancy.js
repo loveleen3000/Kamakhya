@@ -1,0 +1,131 @@
+export const TRIMESTERS = [
+  {
+    id: 1,
+    label: 'First trimester',
+    weeks: 'Weeks 1–13',
+    title: 'Foundations',
+    focus:
+      'The placenta forms and every major organ begins taking shape. Energy can dip while hormones rise — deep tiredness here is your body working, not weakness.',
+    tip: 'Small, frequent meals, ginger tea and extra rest genuinely help when nausea and fatigue peak.',
+  },
+  {
+    id: 2,
+    label: 'Second trimester',
+    weeks: 'Weeks 14–27',
+    title: 'Growing',
+    focus:
+      'Energy often returns, the bump shows, and between weeks 18–22 many people feel the baby move for the first time.',
+    tip: 'Gentle daily activity, hydration and iron-rich foods support your body as it carries more.',
+  },
+  {
+    id: 3,
+    label: 'Third trimester',
+    weeks: 'Weeks 28–40+',
+    title: 'Preparation',
+    focus:
+      'The baby gains weight quickly and movements become strong and patterned. Rest becomes real work now.',
+    tip: 'Learn your baby’s movement pattern; mention any noticeable reduction to your care team.',
+  },
+];
+
+export const WEEKS = [
+  { w: 1, size: 'a poppy seed', baby: 'The neural tube and early heart cells begin forming.', you: 'You may feel nothing yet — or light cramping and spotting as the embryo implants.', care: 'If advised, take a prenatal vitamin with folic acid and keep sipping water.', ask: 'Which prenatal vitamin suits me, and should I adjust any current medicines?' },
+  { w: 2, size: 'an apple seed', baby: 'A tiny heart tube starts beating; arm and leg buds appear.', you: 'Breast tenderness and deep tiredness are common now.', care: 'Rest without guilt — sleep is doing real work this week.', ask: 'Are the medicines and supplements I take safe to continue?' },
+  { w: 3, size: 'a blueberry', baby: 'The brain, spine and major organs grow fast; a steady heartbeat can be seen on scans.', you: 'Morning sickness may begin — though it can arrive at any hour.', care: 'Dry crackers, ginger tea and small frequent meals help; keep fluids up.', ask: 'What can I safely take if nausea becomes hard to manage?' },
+  { w: 4, size: 'a raspberry', baby: 'Eyes, ears and the face begin to form; the placenta starts taking over.', you: 'Fatigue may peak, and clothes can start feeling snug.', care: 'Pair iron-rich foods with vitamin C, and honour early nights.', ask: 'Which routine tests and scans will I need, and when?' },
+  { w: 5, size: 'a sesame seed', baby: 'The heart divides into chambers; a tiny nose and mouth appear.', you: 'Nausea, tiredness and more bathroom trips may all be here.', care: 'Eat what you can manage — nourishment is cumulative, not perfect.', ask: 'How should I adapt my exercise routine right now?' },
+  { w: 6, size: 'a lentil', baby: 'Fingers and toes emerge; the heartbeat may be seen on an early scan.', you: 'Emotions can swing sharply alongside hormones — that is normal.', care: 'Gentle walks and stretching help both body and mood.', ask: 'What warning signs mean I should call you right away?' },
+  { w: 7, size: 'a grape', baby: 'The brain grows fast; arms and legs lengthen and elbows bend.', you: 'Nausea often continues; some notice more saliva or sudden food dislikes.', care: 'Keep plain foods nearby and rest between small activities.', ask: 'Is my morning sickness pattern normal, or should I be checked?' },
+  { w: 8, size: 'a kidney bean', baby: 'Fingers and toes lose their webbing; the little tail disappears.', you: 'You may look a little bloated as the uterus grows.', care: 'Loose, comfortable clothes and steady hydration make days easier.', ask: 'When will my first ultrasound happen and what will it show?' },
+  { w: 9, size: 'a cherry', baby: 'The head is large and rounded; tiny earlobes are visible.', you: 'Nausea may start easing soon; veins may show as blood volume rises.', care: 'Begin gentle pelvic-floor exercises if your care team agrees.', ask: 'Which foods and drinks should I avoid completely?' },
+  { w: 10, size: 'a strawberry', baby: 'Vital organs are working — liver, kidneys and intestines.', you: 'You may hear a heartbeat at your first visit; emotions can feel big.', care: 'Take photos or notes — a small record becomes precious later.', ask: 'What screening tests are offered, and what do they check?' },
+  { w: 11, size: 'a fig', baby: 'The baby can hiccup; tooth buds and hair follicles form.', you: 'Appetite may return as nausea fades; leg cramps can start.', care: 'Stretch your calves before bed and keep water at your bedside.', ask: 'Are my screening results so far reassuring, or should we discuss more?' },
+  { w: 12, size: 'a lime', baby: 'Reflexes appear — fingers open and close; kidneys make urine.', you: 'The bump may announce itself; dizziness can happen when standing up.', care: 'Rise slowly, and eat steady meals to steady blood sugar.', ask: 'Should I be doing anything specific about dizziness or faintness?' },
+  { w: 13, size: 'a peach', baby: 'Vocal cords and fingerprints begin forming.', you: 'Energy often improves — the second-trimester steadiness begins.', care: 'Use this calmer stretch for gentle walks and healthy routines.', ask: 'What should healthy weight gain look like for my body?' },
+  { w: 14, size: 'a lemon', baby: 'Fine lanugo hair covers the body; the liver and spleen are working.', you: 'Nausea usually eases; a small bump becomes visible.', care: 'Begin moisturising the bump to comfort stretching skin.', ask: 'Which exercises are safest as my body changes?' },
+  { w: 15, size: 'an apple', baby: 'The baby senses light through closed eyelids; bones harden.', you: 'Nosebleeds and stuffiness can appear from extra blood flow.', care: 'Saline sprays and a humidifier bring simple relief.', ask: 'Is my blood pressure normal at this visit?' },
+  { w: 16, size: 'an avocado', baby: 'The heart pumps strongly; movements get more coordinated.', you: 'You may feel the very first flutters — a gentle quickening.', care: 'Talk or sing to the baby — low, familiar voices can be soothing.', ask: 'Should I start tracking movements yet, and how?' },
+  { w: 17, size: 'a pear', baby: 'Fat begins forming; the baby practises sucking and swallowing.', you: 'Round ligament twinges can happen when you move quickly.', care: 'Change positions slowly, and support your belly when laughing or sneezing.', ask: 'Which twinges are normal and which should I report?' },
+  { w: 18, size: 'a bell pepper', baby: 'Ears stand out; the baby yawns and hiccups.', you: 'Appetite grows; sleep may become lighter and dream-filled.', care: 'A pillow between the knees can transform sleep.', ask: 'When will the anomaly scan happen and what does it look for?' },
+  { w: 19, size: 'a mango', baby: 'The brain’s scent, taste, hearing and touch zones develop.', you: 'Skin can feel itchy as it stretches; steady hydration helps.', care: 'Moisturise daily and keep showers lukewarm, not hot.', ask: 'Is the baby’s growth on track at this stage?' },
+  { w: 20, size: 'a banana', baby: 'The baby can swallow a little amniotic fluid; the digestive system practises.', you: 'The halfway mark — you may feel steadier kicks now.', care: 'Begin noting movement patterns; gentle activity benefits you both.', ask: 'How should I notice movements, and when should I call?' },
+  { w: 21, size: 'a carrot', baby: 'Eyebrows and lids are present; kicks grow stronger.', you: 'Stretch marks and mild swelling can appear; legs may ache.', care: 'Rest with feet raised in the evening, and keep moving gently.', ask: 'How much swelling is normal, and what is a concern?' },
+  { w: 22, size: 'a papaya', baby: 'The baby’s grip strengthens; lips and nose are distinct.', you: 'The belly button may feel flat or tender as the bump grows.', care: 'Good posture and a supportive band can ease back strain.', ask: 'Should I have glucose screening soon, and what does it involve?' },
+  { w: 23, size: 'a grapefruit', baby: 'The baby hears your voice, heartbeat and digestion.', you: 'Braxton Hicks practice tightenings may begin.', care: 'Read, sing or chat aloud — the baby is listening.', ask: 'How do I tell practice tightenings from real labour?' },
+  { w: 24, size: 'an ear of corn', baby: 'Lungs make surfactant; the face is fully formed.', you: 'The glucose screening window is here for many.', care: 'Balanced meals with protein keep energy steadier.', ask: 'What do my glucose screening results mean for my care?' },
+  { w: 25, size: 'a cauliflower', baby: 'Hair colour and texture appear; the baby responds to sound.', you: 'Heartburn can rise as the uterus presses upward.', care: 'Smaller dinners, earlier evening meals and upright rest can settle it.', ask: 'Which heartburn remedies are safe for me?' },
+  { w: 26, size: 'a zucchini', baby: 'Eyes open and begin to blink; the baby may respond to your hand.', you: 'Rib and back pressure grows; sleep needs creativity.', care: 'Side-sleeping with pillow support protects rest and blood flow.', ask: 'Is my blood pressure and swelling pattern okay this visit?' },
+  { w: 27, size: 'a head of lettuce', baby: 'The baby hiccups regularly; brain activity is busy.', you: 'Snoring and leg cramps are common companions now.', care: 'Stretch before bed and keep hydrated through the day.', ask: 'Should we begin planning for the birth — where and with whom?' },
+  { w: 28, size: 'an eggplant', baby: 'The baby dreams in REM sleep; eyelashes appear.', you: 'Third trimester begins — breathlessness is common as space tightens.', care: 'Frequent small meals and an upright posture ease breathing.', ask: 'What should my birth preferences conversation include?' },
+  { w: 29, size: 'a butternut squash', baby: 'Bones fully harden; the baby draws calcium from you.', you: 'Kicks become unmistakable jabs; heartburn and reflux peak.', care: 'Calcium-rich foods and gentle after-dinner walks help.', ask: 'How often should I come in now, and what happens at visits?' },
+  { w: 30, size: 'a large cabbage', baby: 'The baby can grasp, look around and turn its head.', you: 'Fatigue can return; Braxton Hicks continue.', care: 'Short naps and a lighter schedule protect your energy.', ask: 'Which symptoms in late pregnancy need an urgent call?' },
+  { w: 31, size: 'a coconut', baby: 'All five senses work; weight gain speeds up.', you: 'Breathlessness and backache grow as the baby rises.', care: 'Pelvic tilts and daily walks ease the load.', ask: 'How do we check the baby’s position and growth?' },
+  { w: 32, size: 'a small pineapple', baby: 'The baby practises breathing with amniotic fluid.', you: 'Sleep is choppy; vivid dreams are common.', care: 'A steady wind-down routine helps more than effortful trying.', ask: 'Which movements matter most now, and what should I count?' },
+  { w: 33, size: 'a pineapple', baby: 'Skull bones stay flexible for birth; the baby may turn head-down.', you: 'The bump is high and firm; smaller portions help.', care: 'Frequent small meals and good posture are your friends.', ask: 'Is the baby head-down, and what if not?' },
+  { w: 34, size: 'a cantaloupe', baby: 'Fat layers smooth the skin; the baby recognises daily rhythms.', you: 'Pelvic pressure can begin as the baby settles lower.', care: 'Rest often and keep noticing the usual movement pattern.', ask: 'What are the signs labour is starting, and when should I come in?' },
+  { w: 35, size: 'a honeydew melon', baby: 'The brain grows fast; the baby gains weight daily.', you: 'Many babies drop lower — breathing can suddenly feel easier.', care: 'Keep meals light and frequent, and pack your hospital bag.', ask: 'Should we schedule weekly visits from now?' },
+  { w: 36, size: 'a head of romaine', baby: 'The baby may settle head-down, facing your back.', you: 'Walking can feel heavy; a slower waddle is completely normal.', care: 'Gentle activity plus real rest — both matter now.', ask: 'What should my birth plan include about pain relief?' },
+  { w: 37, size: 'a bunch of kale', baby: 'The baby practises breathing and sucking for the days ahead.', you: 'Lightning-like pelvic twinges can occur as the baby lowers.', care: 'Finalise your bag and birth preferences; rest between tasks.', ask: 'When should I call or come in during early labour?' },
+  { w: 38, size: 'a leek', baby: 'Brain and lungs keep maturing; early term is close now.', you: 'Braxton Hicks may feel more convincing; energy may nest or crash.', care: 'Nap when nesting pauses — labour asks for stamina.', ask: 'What do I do if my water breaks or bleeding starts?' },
+  { w: 39, size: 'a mini watermelon', baby: 'The baby is fully formed and simply gaining weight.', you: 'Any day now — movements feel like rolls and stretches.', care: 'Keep noting movements and keep your bag by the door.', ask: 'Which changes mean I should come in before my due date?' },
+  { w: 40, size: 'a small pumpkin', baby: 'The baby is ready; organs prepared for the outside world.', you: 'Passing your date is common — babies choose their own birthday.', care: 'Rest, hydrate, and call your care team with any change in movements.', ask: 'How long after my date would we discuss induction?' },
+];
+
+export const MOODS = ['Calm', 'Happy', 'Excited', 'Anxious', 'Tearful', 'Overwhelmed', 'Irritable', 'Low'];
+
+export const SYMPTOMS = [
+  'Nausea', 'Vomiting', 'Fatigue', 'Heartburn', 'Backache', 'Breast tenderness',
+  'Headache', 'Swelling', 'Cramps', 'Dizziness', 'Constipation', 'Insomnia',
+  'Breathlessness', 'Braxton Hicks', 'Pelvic pressure',
+];
+
+export const DANGER_SIGNS = [
+  'Heavy vaginal bleeding',
+  'Severe abdominal pain or cramping that does not ease',
+  'Severe headache, vision changes, or sudden swelling of face and hands',
+  'Fever above 38°C or chills',
+  'Fluid leaking from the vagina before labour',
+  'Regular, painful contractions before 37 weeks',
+  'The baby moving noticeably less than usual',
+  'Persistent vomiting or signs of dehydration',
+  'Dizziness, fainting, or difficulty breathing',
+];
+
+export const CATEGORIES = [
+  { id: 'bag', label: 'Hospital bag' },
+  { id: 'birth', label: 'Birth preferences' },
+  { id: 'questions', label: 'Questions for your team' },
+  { id: 'contacts', label: 'Important contacts' },
+  { id: 'home', label: 'Home & family' },
+];
+
+export const DEFAULT_TASKS = [
+  { category: 'bag', label: 'Hospital documents & ID' },
+  { category: 'bag', label: 'Comfortable going-home outfit for you' },
+  { category: 'bag', label: 'Newborn outfit & soft blanket' },
+  { category: 'bag', label: 'Toiletries & lip balm' },
+  { category: 'bag', label: 'Phone charger with a long cable' },
+  { category: 'bag', label: 'Hair tie & slippers' },
+  { category: 'bag', label: 'Snacks & a water bottle' },
+  { category: 'bag', label: 'Sanitary / maternity pads' },
+  { category: 'birth', label: 'Write your birth preferences — pain relief, positions, support people' },
+  { category: 'birth', label: 'Decide who you want present at the birth' },
+  { category: 'birth', label: 'Preferences for the first hour after birth' },
+  { category: 'birth', label: 'Questions about possible induction or caesarean scenarios' },
+  { category: 'questions', label: 'Ask what each upcoming scan checks' },
+  { category: 'questions', label: 'Ask which symptoms need an urgent call' },
+  { category: 'questions', label: 'Ask how to notice the baby’s movements' },
+  { category: 'questions', label: 'Ask about safe activity and exercise now' },
+  { category: 'questions', label: 'Ask what to pack and when to leave for the hospital' },
+  { category: 'contacts', label: 'Your obstetrician / midwife — name & phone', note: 'Add the number here' },
+  { category: 'contacts', label: 'Hospital labour ward', note: 'Add the number here' },
+  { category: 'contacts', label: 'Partner / birth support', note: 'Add the number here' },
+  { category: 'contacts', label: 'Emergency contact', note: 'Add the number here' },
+  { category: 'contacts', label: 'Baby’s first check-up contact', note: 'Add the number here' },
+  { category: 'home', label: 'Install and check the baby’s car seat' },
+  { category: 'home', label: 'Wash newborn clothes and bedding' },
+  { category: 'home', label: 'Set up a safe sleep space' },
+  { category: 'home', label: 'Stock the freezer with easy meals' },
+  { category: 'home', label: 'Plan help at home for the first weeks' },
+  { category: 'home', label: 'Arrange care for siblings or pets during the birth' },
+];

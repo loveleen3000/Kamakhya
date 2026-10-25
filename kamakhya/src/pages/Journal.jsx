@@ -10,7 +10,7 @@ import { useApp } from '@/lib/AppContext';
 import { CYCLE, JOURNAL, MOODS, phaseForCycleDay } from '@/data/kamakhya';
 
 export default function Journal() {
-  const { t } = useApp();
+  const { t, language } = useApp();
   const { toast } = useToast();
   const [mood, setMood] = useState('radiant');
   const [energy, setEnergy] = useState(4);
@@ -36,6 +36,28 @@ export default function Journal() {
       console.error(e);
     }
   }, [entries]);
+
+  // Delete multiple entries (Selected items)
+  const handleDeleteSelected = (idsToDelete) => {
+    setEntries((prev) => prev.filter((item) => !idsToDelete.includes(item.id)));
+    if (toast) {
+      toast({
+        title: language === 'hi' ? 'रिफ्लेक्शन्स हटा दिए गए' : 'Reflections deleted',
+        description: language === 'hi' ? 'चयनित एंट्रीज सफलतापूर्वक हटा दी गईं।' : 'Selected entries were successfully removed.',
+      });
+    }
+  };
+
+  // Delete single entry
+  const handleDeleteSingle = (id) => {
+    setEntries((prev) => prev.filter((item) => item.id !== id));
+    if (toast) {
+      toast({
+        title: language === 'hi' ? 'एंट्री हटा दी गई' : 'Entry deleted',
+        description: language === 'hi' ? 'यह एंट्री हटा दी गई है।' : 'Entry removed successfully.',
+      });
+    }
+  };
 
   // Compute live cycle stats from user's logged period dates
   const liveCycle = useMemo(() => {
@@ -79,7 +101,7 @@ export default function Journal() {
     const entry = {
       id: `new-${Date.now()}`,
       date: `${monthStr} ${dayNum}`,
-      label: 'Today',
+      label: language === 'hi' ? 'आज' : 'Today',
       cycleDay,
       phase: phaseName,
       moodKey: mood,
@@ -87,7 +109,7 @@ export default function Journal() {
       pain: symptoms.includes('cramps') ? 3 : 1,
       temperature: (CYCLE?.basalTemp || 36.6).toString(),
       symptoms: symptoms.length ? symptoms : ['bloating'],
-      note: note.trim() || 'Logged a quick check-in — no notes today.',
+      note: note.trim() || (language === 'hi' ? 'त्वरित चेक-इन लॉग किया गया — कोई नोट नहीं।' : 'Logged a quick check-in — no notes today.'),
       ritual: 'Logged in Kamakhya',
     };
 
@@ -97,16 +119,20 @@ export default function Journal() {
     if (toast) {
       const moodLabel = MOODS?.find((m) => m.key === mood)?.label || mood;
       toast({
-        title: 'Reflection saved',
-        description: `${moodLabel} · energy ${energy}/5 logged for today.`,
+        title: language === 'hi' ? 'रिफ्लेक्शन सुरक्षित किया गया' : 'Reflection saved',
+        description: `${moodLabel} · ${language === 'hi' ? 'ऊर्जा' : 'energy'} ${energy}/5`,
       });
     }
   };
 
+  const isHindi = language === 'hi';
+
   return (
     <div className="mx-auto max-w-7xl px-4 pb-20 pt-12 sm:px-6 lg:px-8">
       <div className="max-w-2xl">
-        <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-lotus">Daily log</span>
+        <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-lotus">
+          {isHindi ? 'दैनिक लॉग' : 'Daily log'}
+        </span>
         <h1 className="mt-3 font-display text-4xl leading-tight text-plum sm:text-5xl">{t('journalTitle')}</h1>
         <p className="mt-3 text-base text-plum/60">{t('journalSub')}</p>
       </div>
@@ -135,13 +161,20 @@ export default function Journal() {
         </div>
 
         <div>
-          <div className="mb-6 flex items-center justify-between">
-            <h2 className="font-heading text-2xl text-plum">{t('timelineTitle')}</h2>
+          <div className="mb-4 flex items-center justify-between">
+            <h2 className="font-heading text-2xl text-plum">
+              {isHindi ? 'आपकी हालिया प्रविष्टियाँ' : t('timelineTitle')}
+            </h2>
             <span className="rounded-full bg-peach px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-[#9A5B1F]">
-              {entries.length} entries
+              {entries.length} {isHindi ? 'प्रविष्टियाँ' : 'entries'}
             </span>
           </div>
-          <JournalTimeline entries={entries} />
+          
+          <JournalTimeline 
+            entries={entries} 
+            onDeleteSelected={handleDeleteSelected}
+            onDeleteSingle={handleDeleteSingle}
+          />
         </div>
       </div>
     </div>
